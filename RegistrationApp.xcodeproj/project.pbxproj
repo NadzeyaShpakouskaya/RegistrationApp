@@ -8,17 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		FDC525182732555B005FCB37 /* RegistrationAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC525172732555B005FCB37 /* RegistrationAppApp.swift */; };
-		FDC5251A2732555B005FCB37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC525192732555B005FCB37 /* ContentView.swift */; };
 		FDC5251C2732555E005FCB37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDC5251B2732555E005FCB37 /* Assets.xcassets */; };
 		FDC5251F2732555E005FCB37 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDC5251E2732555E005FCB37 /* Preview Assets.xcassets */; };
+		FDC5252627325639005FCB37 /* StarterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5252527325639005FCB37 /* StarterView.swift */; };
+		FDC5252827325650005FCB37 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5252727325650005FCB37 /* MainView.swift */; };
+		FDC5252A27325664005FCB37 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5252927325664005FCB37 /* RegisterView.swift */; };
+		FDC5252D27325726005FCB37 /* RegistrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5252C27325726005FCB37 /* RegistrationManager.swift */; };
+		FDC5252F27325742005FCB37 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5252E27325742005FCB37 /* StorageManager.swift */; };
+		FDC5253127325757005FCB37 /* TimeCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5253027325757005FCB37 /* TimeCounter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FDC525142732555B005FCB37 /* RegistrationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegistrationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC525172732555B005FCB37 /* RegistrationAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAppApp.swift; sourceTree = "<group>"; };
-		FDC525192732555B005FCB37 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FDC5251B2732555E005FCB37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDC5251E2732555E005FCB37 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FDC5252527325639005FCB37 /* StarterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterView.swift; sourceTree = "<group>"; };
+		FDC5252727325650005FCB37 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FDC5252927325664005FCB37 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		FDC5252C27325726005FCB37 /* RegistrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationManager.swift; sourceTree = "<group>"; };
+		FDC5252E27325742005FCB37 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		FDC5253027325757005FCB37 /* TimeCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCounter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +62,9 @@
 			isa = PBXGroup;
 			children = (
 				FDC525172732555B005FCB37 /* RegistrationAppApp.swift */,
-				FDC525192732555B005FCB37 /* ContentView.swift */,
+				FDC5253227325760005FCB37 /* Services */,
+				FDC525332732576C005FCB37 /* Helpers */,
+				FDC5252B273256FF005FCB37 /* Views */,
 				FDC5251B2732555E005FCB37 /* Assets.xcassets */,
 				FDC5251D2732555E005FCB37 /* Preview Content */,
 			);
@@ -65,6 +77,33 @@
 				FDC5251E2732555E005FCB37 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FDC5252B273256FF005FCB37 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FDC5252527325639005FCB37 /* StarterView.swift */,
+				FDC5252727325650005FCB37 /* MainView.swift */,
+				FDC5252927325664005FCB37 /* RegisterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FDC5253227325760005FCB37 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FDC5252C27325726005FCB37 /* RegistrationManager.swift */,
+				FDC5252E27325742005FCB37 /* StorageManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FDC525332732576C005FCB37 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FDC5253027325757005FCB37 /* TimeCounter.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDC5251A2732555B005FCB37 /* ContentView.swift in Sources */,
+				FDC5252D27325726005FCB37 /* RegistrationManager.swift in Sources */,
+				FDC5252A27325664005FCB37 /* RegisterView.swift in Sources */,
+				FDC5252827325650005FCB37 /* MainView.swift in Sources */,
+				FDC5252F27325742005FCB37 /* StorageManager.swift in Sources */,
 				FDC525182732555B005FCB37 /* RegistrationAppApp.swift in Sources */,
+				FDC5253127325757005FCB37 /* TimeCounter.swift in Sources */,
+				FDC5252627325639005FCB37 /* StarterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
