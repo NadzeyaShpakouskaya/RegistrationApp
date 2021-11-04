@@ -56,7 +56,7 @@ extension RegistrationView {
     
     private var confirmButtonView: some View {
         Button(action: {
-            appStorageManager.saveNewUserAs(enteredName)
+            appStorageManager.saveNewUserWith(enteredName)
         }) {
             HStack {
                 Image(systemName: "checkmark.circle")

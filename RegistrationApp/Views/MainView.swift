@@ -55,11 +55,12 @@ extension MainView {
                     .resizable()
                     .frame(width: 60, height: 60)
                 
-                HStack (spacing: 20){
+                HStack (spacing: 16){
                     Text("Timer: ")
                         .fontWeight(.semibold)
                     Text("\(timer.counter)")
                         .fontWeight(.semibold)
+                        .frame(width: 25)
                 }
                 .font(.title)
                 

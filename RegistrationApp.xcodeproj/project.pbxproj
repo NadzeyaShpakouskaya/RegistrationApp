@@ -88,7 +88,7 @@
 				FDC5252727325650005FCB37 /* MainView.swift */,
 				FDC5252927325664005FCB37 /* RegistrationView.swift */,
 				FDC5253A2733CE4C005FCB37 /* DefaultAppButtonView.swift */,
-				FDC5253C2733DB82005FCB37 /* TextFieldView+Modifiers.swift */,
+				FDC5253E27340803005FCB37 /* Modifiers */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -107,6 +107,14 @@
 				FDC5253027325757005FCB37 /* TimeCounter.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FDC5253E27340803005FCB37 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				FDC5253C2733DB82005FCB37 /* TextFieldView+Modifiers.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

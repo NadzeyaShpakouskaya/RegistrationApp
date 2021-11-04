@@ -16,8 +16,7 @@ class TimeCounter: ObservableObject {
     let objectWillChange = PassthroughSubject<TimeCounter, Never>()
 
     private var timer: Timer?
-    private var duration: Int
-
+    private var duration: Int // to reset timer value
 
     init(duration time: Int = 3) {
         self.counter = time

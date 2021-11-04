@@ -16,7 +16,7 @@ class AppStorageManager: ObservableObject {
     @AppStorage("isRegistered") private var isRegistered: Bool?
     
     
-    func saveNewUserAs(_ name: String) {
+    func saveNewUserWith(_ name: String) {
         isRegistered = true
         self.name = name
         objectWillChange.send(self)
