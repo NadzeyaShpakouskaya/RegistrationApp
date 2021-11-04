@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct RegistrationAppApp: App {
+    @StateObject private var appStorageManager = AppStorageManager()
+    
     var body: some Scene {
         WindowGroup {
-            StarterView()
+            StartView()
+                .environmentObject(appStorageManager)
         }
     }
 }
