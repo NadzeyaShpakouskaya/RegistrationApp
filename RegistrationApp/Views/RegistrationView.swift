@@ -9,9 +9,11 @@ import SwiftUI
 
 struct RegistrationView: View {
 
-    @State private var enteredName = ""
-    
+//    @State private var enteredName = ""
+//
     @EnvironmentObject private var appStorageManager: AppStorageManager
+    
+    @EnvironmentObject private var userManager: UserManager
     
     var body: some View {
         VStack (spacing: 32) {
@@ -26,7 +28,7 @@ struct RegistrationView: View {
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
         RegistrationView()
-            .environmentObject(AppStorageManager())
+            .environmentObject(UserManager())
     }
 }
 
@@ -42,13 +44,13 @@ extension RegistrationView {
     
     private var inputView: some View {
         HStack(spacing: 16) {
-            TextField("Enter your name", text: $enteredName)
+            TextField("Enter your name", text: $userManager.user.name)
                 .bordered()
                 .multilineTextAlignment(.center)
                 .foregroundColor(.indigo)
         
-            Text("\(enteredName.count)")
-                .foregroundColor(isUsernameInputValid() ? .green : .red)
+            Text("\(userManager.user.name.count)")
+                .foregroundColor(userManager.nameIsValid ? .green : .red)
         }
         .font(.title2)
         .padding()
@@ -56,15 +58,15 @@ extension RegistrationView {
     
     private var confirmButtonView: some View {
         Button(action: {
-            appStorageManager.saveNewUserWith(enteredName)
+            registerUser()
         }) {
             HStack {
                 Image(systemName: "checkmark.circle")
                 Text("OK").bold()
             }.font(.title2)
-                .foregroundColor(isUsernameInputValid() ? .indigo : .secondary)
+                .foregroundColor(userManager.nameIsValid ? .indigo : .secondary)
         }
-        .disabled(!isUsernameInputValid())        
+        .disabled(!userManager.nameIsValid)
     }
 }
 
@@ -72,8 +74,11 @@ extension RegistrationView {
 // MARK: - Private Methods
 extension RegistrationView {
     
-    private func isUsernameInputValid() -> Bool {
-        return enteredName.count > 2
+   private func registerUser() {
+        if !userManager.user.name.isEmpty {
+            userManager.user.isRegistered.toggle()
+            appStorageManager.saveUser(user: userManager.user)
+        }
     }
     
 }

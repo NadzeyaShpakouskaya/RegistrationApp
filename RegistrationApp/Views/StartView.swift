@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct StartView: View {
-    @EnvironmentObject private var appStorageManager: AppStorageManager
+
+    @EnvironmentObject private var userManager: UserManager
     
     var body: some View {
         Group {
-            if appStorageManager.isUserRegistered() {
+            if userManager.user.isRegistered {
                 MainView()
             } else {
                 RegistrationView()
@@ -24,6 +25,6 @@ struct StartView: View {
 struct StarterView_Previews: PreviewProvider {
     static var previews: some View {
         StartView()
-            .environmentObject(AppStorageManager())
+            .environmentObject(UserManager())
     }
 }

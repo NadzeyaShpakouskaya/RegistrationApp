@@ -11,6 +11,7 @@ struct MainView: View {
     
     @StateObject private var timer = TimeCounter()
     @EnvironmentObject private var appStorageManager: AppStorageManager
+    @EnvironmentObject private var userManager: UserManager
     
     var body: some View {
         ZStack{
@@ -22,7 +23,7 @@ struct MainView: View {
                 DefaultAppButtonView(
                     title: "Log out",
                     backgroundColor: .red){
-                        appStorageManager.removeUser()
+                        appStorageManager.clear(userManager: userManager)
                     }
             }
             .padding(EdgeInsets(top: 50, leading: 16, bottom: 50, trailing: 16))
@@ -76,7 +77,7 @@ extension MainView {
     }
     
     private var greetingView: some View {
-        Text("Welcome, \(appStorageManager.fetchUserName())!")
+        Text("Welcome, \(userManager.user.name)!")
             .bold()
             .font(.largeTitle)
             .foregroundColor(.white)

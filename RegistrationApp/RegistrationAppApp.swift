@@ -9,12 +9,14 @@ import SwiftUI
 
 @main
 struct RegistrationAppApp: App {
+    
     @StateObject private var appStorageManager = AppStorageManager()
     
     var body: some Scene {
         WindowGroup {
             StartView()
                 .environmentObject(appStorageManager)
+                .environmentObject(UserManager(user: appStorageManager.loadUser()))
         }
     }
 }

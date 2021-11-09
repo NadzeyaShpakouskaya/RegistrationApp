@@ -12,27 +12,25 @@ import SwiftUI
 class AppStorageManager: ObservableObject {
     let objectWillChange = PassthroughSubject<AppStorageManager, Never>()
     
-    @AppStorage("username") private var name: String = ""
-    @AppStorage("isRegistered") private var isRegistered: Bool?
+    @AppStorage("user") private var userData: Data?
     
-    
-    func saveNewUserWith(_ name: String) {
-        isRegistered = true
-        self.name = name
+    func saveUser(user: User) {
+        userData = try? JSONEncoder().encode(user)
         objectWillChange.send(self)
     }
     
-    func removeUser() {
-        isRegistered = nil
-        name = ""
+    func loadUser() -> User {
+        guard let user = try? JSONDecoder().decode(
+            User.self,
+            from: userData ?? Data()
+        ) else { return User() }
+        return user
+    }
+    
+    func clear(userManager: UserManager) {
+        userManager.user.isRegistered = false
+        userManager.user.name = ""
+        userData = nil
         objectWillChange.send(self)
-    }
-    
-    func fetchUserName() -> String {
-        return name
-    }
-    
-    func isUserRegistered() -> Bool {
-        return isRegistered ?? false
     }
 }

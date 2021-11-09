@@ -17,6 +17,7 @@
 		FDC525392733965D005FCB37 /* AppStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC525382733965D005FCB37 /* AppStorageManager.swift */; };
 		FDC5253B2733CE4C005FCB37 /* DefaultAppButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5253A2733CE4C005FCB37 /* DefaultAppButtonView.swift */; };
 		FDC5253D2733DB82005FCB37 /* TextFieldView+Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5253C2733DB82005FCB37 /* TextFieldView+Modifiers.swift */; };
+		FDC5254227390F87005FCB37 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5254127390F87005FCB37 /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		FDC525382733965D005FCB37 /* AppStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageManager.swift; sourceTree = "<group>"; };
 		FDC5253A2733CE4C005FCB37 /* DefaultAppButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAppButtonView.swift; sourceTree = "<group>"; };
 		FDC5253C2733DB82005FCB37 /* TextFieldView+Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextFieldView+Modifiers.swift"; sourceTree = "<group>"; };
+		FDC5254127390F87005FCB37 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				FDC525382733965D005FCB37 /* AppStorageManager.swift */,
+				FDC5254127390F87005FCB37 /* UserManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDC5254227390F87005FCB37 /* UserManager.swift in Sources */,
 				FDC5252A27325664005FCB37 /* RegistrationView.swift in Sources */,
 				FDC5253D2733DB82005FCB37 /* TextFieldView+Modifiers.swift in Sources */,
 				FDC5253B2733CE4C005FCB37 /* DefaultAppButtonView.swift in Sources */,
